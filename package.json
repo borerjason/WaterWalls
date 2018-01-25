@@ -1,0 +1,20 @@
+{
+  "name": "WaterWalls",
+  "version": "1.0.0",
+  "description": "Input: An array of integers that represent a series of walls of different heights.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borerjason/WaterWalls.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borerjason/WaterWalls/issues"
+  },
+  "homepage": "https://github.com/borerjason/WaterWalls#readme"
+}
