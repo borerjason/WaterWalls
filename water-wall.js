@@ -26,7 +26,7 @@ const waterWalls = (walls) => {
     }
   }
 
-  let wallLeft = 0;
+  let wallLeft = 1;
 
   for (let j = 1; j < water.length; j += 1) {
     if (water[j] !== 'x') {
@@ -50,3 +50,5 @@ const waterWalls = (walls) => {
 }
 
 console.log(waterWalls([5, 3, 7, 2, 6, 4, 5, 9, 1, 2]));
+
+module.exports = waterWalls;
