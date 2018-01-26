@@ -21,7 +21,7 @@ Time Complexity: 0(n) since there are multiple for loops through arrays.
   sampleOutput = [3, 8, 11];  
 
 --- Function skeleton ---  
-const waterWalls = (walls) => {
+const waterWalls = (walls) => {  
   // Find max height of left wall  
   // Find max height of right wall  
   // Find amount of water at each wall  
