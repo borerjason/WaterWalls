@@ -6,8 +6,6 @@ const fetchBlocks = walls => (
     headers: new Headers({
       'Content-Type': 'application/json'
     })
-  })
-    .then(response => response.json()) 
-)
+  }).then(response => response.json()) 
+);
 
-module.exports = fetchBlocks;
