@@ -1,21 +1,23 @@
-const waterWalls = (walls) => {
-  let rainRecord = {left: null, right: null, rain: 0};
-  let currentRain = 0;
-  let wallLeft = 1;
-  let left = [];
-  let right = [];
-  let water = ['x'];
-
-  left.push(walls[0]);
-  right[walls.length - 1] = walls[walls.length - 1];
-
+const generateMaxLeft = (walls) => {
+  let left = [walls[0]];
   for (let i = 1; i < walls.length; i += 1) {
-    left[i] = (Math.max(left[i-1], walls[i]));
+    left[i] = (Math.max(left[i - 1], walls[i]));
   }
+  return left;
+};
 
+const generateMaxRight = (walls) => {
+  let right = []; 
+  right[walls.length - 1] = walls[walls.length - 1];
+  
   for (let i = walls.length - 2; i >= 0; i -= 1) {
-    right[i] = (Math.max(right[i+1], walls[i]));
+    right[i] = (Math.max(right[i + 1], walls[i]));
   }
+  return right;
+};
+
+const generateWater = (walls, left, right) => {
+  let water = ['x'];
 
   for (let i = 1; i < walls.length; i += 1) {
     if (left[i] > walls[i] && right[i] > walls[i]) {
@@ -24,7 +26,18 @@ const waterWalls = (walls) => {
       water[i] = 'x';
     }
   }
+  return water;
+}
 
+const waterWalls = (walls) => {
+  let left = generateMaxLeft(walls);
+  let right = generateMaxRight(walls);
+  let water = generateWater(walls, left, right);
+  
+  let rainRecord = {left: null, right: null, rain: 0};
+  let currentRain = 0;
+  let wallLeft = 1;
+  
   for (let j = 1; j < water.length; j += 1) {
     if (water[j] !== 'x') {
       currentRain += water[j];
