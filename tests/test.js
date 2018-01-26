@@ -15,3 +15,11 @@ test('works with three walls', () => {
   
   expect(actual).toEqual(expected);
 });
+
+test('returns null if there is no water', () => {
+  const input = [5, 5, 5];
+  const actual = waterWall(input);
+  const expected = [null, null, 0];
+  
+  expect(actual).toEqual(expected);
+});

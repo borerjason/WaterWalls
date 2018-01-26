@@ -1,6 +1,7 @@
 const waterWalls = (walls) => {
+  let rainRecord = {left: null, right: null, rain: 0};
   let currentRain = 0;
-  let rainRecord = {left: 0, right: null, rain: 0};
+  let wallLeft = 1;
   
   let left = [];
   let right = [];
@@ -26,8 +27,6 @@ const waterWalls = (walls) => {
     }
   }
 
-  let wallLeft = 1;
-
   for (let j = 1; j < water.length; j += 1) {
     if (water[j] !== 'x') {
       currentRain += water[j];
@@ -44,7 +43,6 @@ const waterWalls = (walls) => {
       }
     }
   }
-
   return [rainRecord.left, rainRecord.right, rainRecord.rain]
   
 }
