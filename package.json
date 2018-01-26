@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/borerjason/WaterWalls/issues"
   },
-  "homepage": "https://github.com/borerjason/WaterWalls#readme"
+  "homepage": "https://github.com/borerjason/WaterWalls#readme",
+  "jest": {
+    "verbose": true
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
 }

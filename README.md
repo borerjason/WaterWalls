@@ -3,12 +3,12 @@
 --- Setup ---
 
   Input: An array of integers that represent a series of walls of different heights. 
-  Ouput: Array of integers that represent the index of the two walls such that the most rain is captured between them and the amount of rain captured. 
+  Ouput: Array of integers that represent the index of the two walls such that the most rain is captured between them, and the amount of rain captured. 
 
 --- Strategy ---  
 
-Calculate the max left and max right per wall. Then calculate the max water between two walls.
-Time Complexity: 0(n) since did multiple for loops through arrays 
+Calculate the max height left and max height right per wall. Then calculate the max water between the two walls.
+Time Complexity: 0(n) since there are multiple for loops through arrays 
 
 --- Transformation ---
 
