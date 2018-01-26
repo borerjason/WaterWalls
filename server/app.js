@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(path.join(express.static(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.json());
+app.use('/', require('./routes'));
 
 const PORT = process.env.PORT || 8080;
 
