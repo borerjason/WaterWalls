@@ -7,6 +7,7 @@ formButton.addEventListener("click", (event) => {
   fetchBlocks(input)
     .then((response) => {
       console.log('response', response);
+      createGrid(response.input);
     })
   formInput.value = "";
 });
