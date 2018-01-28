@@ -1,4 +1,38 @@
-# WaterWalls
+## Water Walls
+
+> Water walls takes an input of wall heights and presents a representation of all walls (grey), water (blue), and the two walls that contain the most water between them (black). 
+
+## Usage
+
+From the command line, run the following commands:
+
+Clone:
+```sh
+git clone https://github.com/borerjason/waterwalls  
+```
+
+Navigate Into Repo:
+```sh
+cd waterwalls  
+```
+
+Install Dependencies:
+```sh
+npm install
+```
+
+
+Start:
+```sh
+npm start
+```
+
+Test:
+```sh
+npm run tests
+```
+
+## Algorithm Setup
 
 --- Setup ---  
 
