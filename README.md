@@ -33,7 +33,7 @@ navigate to 'localhost:8080'
 
 Test:
 ```sh
-npm run tests
+npm run test
 ```
 
 ## Algorithm Setup
