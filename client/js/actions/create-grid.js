@@ -6,42 +6,45 @@ const createGrid = (response) => {
   
   // create Grid
   let display = document.getElementById('display');
-  display.style.width = `${columns*30}px`;
+  display.style.width = `${columns*50}px`;
 
   for (let i = 0; i < rows; i += 1) {
+    let row = document.createElement('div');
+    row.classList.add('row');
+    document.getElementById('display').appendChild(row);
     for (let j = 0; j < columns; j += 1) {
       let element = document.createElement('div');
       element.classList.add('grid');
-      element.style.width = 700/columns;
-      element.style.height = 700/columns;
-      document.getElementById('display').appendChild(element);
+      document.getElementsByClassName('row')[i].appendChild(element);
     }
   }
+
   const squares = document.getElementById('display').childNodes;
+
   
-  let item = 0;
-
-  for (let i = rows; i > 0; i -= 1) {
+  let item = rows; 
+  
+  for (let i = 0; i < rows; i += 1) {
     for (let j = 0; j < columns; j += 1) {
-      let el = squares[item];
+      let el = squares[i].childNodes[j];
       if (j === 0) {
-        el.textContent = i;
+        let text = document.createElement('p');
+        el.innerText = item;
       } else {
-
-        if (response.input[j-1] >= i) {
+        if (response.input[j-1] >= item) {
           if(j === response.barriers[0] || j === response.barriers[1]) {
             el.style.backgroundColor = "black"; 
-      
+            el.style.outline = "none";
           } else {
-            el.style.backgroundColor = "grey";
+            el.style.backgroundColor = "darkgrey";
           }
         } else {
-          if (response.input[j] + response.water[j] >= i) {
+          if (response.input[j-1] + response.water[j-1] >= item) {
             el.style.backgroundColor = "cyan";
           }
         }
       }
-        item += 1;
-      }
+    }
+    item -= 1;
   }
 }
