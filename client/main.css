@@ -13,7 +13,6 @@ form {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  /* outline: 1px solid black; */
 }
 
 .row {
@@ -26,7 +25,6 @@ form {
   width: 50px;
   height: 50px;
   text-align: center;
-  /* font-size: 4px; */
 }
 
 #entry {

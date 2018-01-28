@@ -1,4 +1,3 @@
-
 const fetchBlocks = walls => (
   fetch('/waterwalls', {
     method: "POST",
@@ -8,4 +7,3 @@ const fetchBlocks = walls => (
     })
   }).then(response => response.json()) 
 );
-

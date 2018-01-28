@@ -1,9 +1,27 @@
-/*
-barriers: [3, 8, 11]
-input: [5, 3, 7, 2, 6, 4, 5, 9, 1, 2]
-water: [null, 2, null, 5, 1, 3, 2, null, 1, null]
-*/
-
-const fillGrid = (data) => {
+const fillGrid = (response, columns, rows) => {
+  const squares = document.getElementById('display').childNodes;
+  let item = rows;
   
+  for (let i = 0; i < rows; i += 1) {
+    for (let j = 0; j < columns; j += 1) {
+      let el = squares[i].childNodes[j];
+      if (j === 0) {
+        el.innerText = item;
+      } else {
+        if (response.input[j - 1] >= item) {
+          if (j === response.barriers[0] || j === response.barriers[1]) {
+            el.style.backgroundColor = 'black';
+            el.style.outline = 'none';
+          } else {
+            el.style.backgroundColor = 'darkgrey';
+          }
+        } else {
+          if (response.input[j - 1] + response.water[j - 1] >= item) {
+            el.style.backgroundColor = 'cyan';
+          }
+        }
+      }
+    }
+    item -= 1;
+  }
 }
