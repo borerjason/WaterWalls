@@ -1,12 +1,14 @@
 .grid {
-  outline: 1px solid black;
+  outline: 1px solid grey;
   display: inline-block;
   width: 30px;
   height: 30px;
   margin: 0;
   padding: 0;
+  /* font-size: 4px; */
 }
 
 #display {
-
+  font-size: 0;
+  position: relative;
 }
