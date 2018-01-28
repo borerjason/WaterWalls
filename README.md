@@ -8,12 +8,12 @@ From the command line, run the following commands:
 
 Clone:
 ```sh
-git clone https://github.com/borerjason/waterwalls  
+git clone https://github.com/borerjason/WaterWalls.git  
 ```
 
 Navigate Into Repo:
 ```sh
-cd waterwalls  
+cd WaterWalls  
 ```
 
 Install Dependencies:
@@ -26,6 +26,9 @@ Start:
 ```sh
 npm start
 ```
+View:
+```sh
+navigate to 'localhost:8080' in your browser or choice
 
 Test:
 ```sh
