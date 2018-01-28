@@ -28,7 +28,8 @@ npm start
 ```
 View:
 ```sh
-navigate to 'localhost:8080' in your browser or choice
+navigate to 'localhost:8080' 
+```
 
 Test:
 ```sh
