@@ -1,10 +1,10 @@
 const fillGrid = (response, columns, rows) => {
   const squares = document.getElementById('display').childNodes;
   let item = rows;
-  
+
   for (let i = 0; i < rows; i += 1) {
     for (let j = 0; j < columns; j += 1) {
-      let el = squares[i].childNodes[j];
+      const el = squares[i].childNodes[j];
       if (j === 0) {
         el.innerText = item;
       } else {
@@ -24,4 +24,4 @@ const fillGrid = (response, columns, rows) => {
     }
     item -= 1;
   }
-}
+};
