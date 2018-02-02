@@ -1,6 +1,8 @@
 ## Water Walls
 
-> Water walls takes an input of wall heights and presents a representation of all walls (grey), water (blue), and the two walls that contain the most water between them (black). 
+> Water walls accepts an input of comma separated wall heights and diplays a representation of all walls (grey), trapped water (blue), and the two walls that contain the most water between them (black). 
+
+Stack: Javascript, Node.js/Express
 
 ## Usage
 
