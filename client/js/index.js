@@ -8,8 +8,10 @@ formButton.addEventListener('click', (event) => {
   const input = formInput.value;
   fetchBlocks(input)
     .then((response) => {
-      console.log('response', response);
       createGrid(response);
+    })
+    .catch((err) => {
+      console.log(err);
     })
   formInput.value = '';
 });

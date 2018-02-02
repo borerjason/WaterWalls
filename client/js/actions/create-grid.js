@@ -19,4 +19,4 @@ const createGrid = (response) => {
   }
   fillGrid(response, columns, rows);
   
-}
+};
